@@ -1,6 +1,6 @@
 import { css, html, LitElement, property } from "lit-element";
-import "@material/mwc-icon"
-import "@material/mwc-fab"
+import "@material/mwc-icon";
+import "@material/mwc-fab";
 
 /**
  * An element that allows the user to select and upload files.
@@ -140,29 +140,28 @@ export class FileUploader extends LitElement {
     const dropZoneClass: string = this.isDragging ? "active_drag" : "no_drag";
 
     return html`
-      <link rel="stylesheet" href="./static/mallard-edge.css">
+      <link rel="stylesheet" href="./static/mallard-edge.css" />
       <div id="drop_zone_container" class="top_layer">
-          <div id="drop_zone_card" class="mdc-elevation--z2">
-              <div
-                id="upload_drop_zone"
-                class="drop_zone ${dropZoneClass}"
-                @drop="${this.handleDrop}"
-                @dragenter="${this.handleDragEnter}"
-                @dragleave="${this.handleDragLeave}"
-              >
-                <mwc-icon id="upload_icon" class="${dropZoneClass}"
-                  >upload_file</mwc-icon
-                >
-                <div class="break"></div>
-                <p id="upload_help" class="${dropZoneClass}">
-                  Drag files here to upload.
-                </p>
-              </div>
+        <div id="drop_zone_card" class="mdc-elevation--z2">
+          <div
+            id="upload_drop_zone"
+            class="drop_zone ${dropZoneClass}"
+            @drop="${this.handleDrop}"
+            @dragenter="${this.handleDragEnter}"
+            @dragleave="${this.handleDragLeave}"
+          >
+            <mwc-icon id="upload_icon" class="${dropZoneClass}"
+              >upload_file</mwc-icon
+            >
+            <div class="break"></div>
+            <p id="upload_help" class="${dropZoneClass}">
+              Drag files here to upload.
+            </p>
           </div>
+        </div>
       </div>
       <mwc-fab icon="add" id="browse"></mwc-fab>
-      <div class="file_list bottom_layer">
-      </div>
+      <div class="file_list bottom_layer"></div>
     `;
   }
 }

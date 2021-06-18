@@ -6,10 +6,12 @@
   --mdc-theme-on-primary: var(--theme-whitish);
 }
 
-#add_data {
+mwc-fab {
   --mdc-theme-secondary: var(--theme-blackish);
   --mdc-theme-on-secondary: var(--theme-whitish);
+}
 
+#add_data {
   /* Position in bottom right. */
   position: absolute;
   bottom: 0;
